@@ -1,0 +1,18 @@
+<!--SPLASH PAGE-->
+    <div data-role="page" id="splash_page">
+
+        <div data-role="header">
+            <h1>Welcome to InstantMeetup!</h1>
+        </div>
+    
+        <div role="main" class="ui-content" style="text-align:center;">
+            <div id="mini_tut">
+                Our system has already created a basic list of users for you to send invites to.
+            </div>
+
+            <div id="continue_button">
+                <input type="button" value='Proceed'>
+            </div>
+
+        </div>
+    </div>

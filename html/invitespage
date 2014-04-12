@@ -1,0 +1,20 @@
+<!--ACTIVE INVITES PAGE-->
+    <div data-role="page" id="list_page">
+
+        <div data-role="header">
+            <h1>Active Invites</h1>
+        </div>
+    
+        <div role="main" class="ui-content" style="text-align:center;">
+
+            <div id="invite_list">
+                
+                <div id="invite">
+                    <p>Antoine has invited you to join him at 23 Pizza Road!</p>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
