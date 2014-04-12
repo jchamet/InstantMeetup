@@ -23,7 +23,7 @@ var getLocation = function(){
 
 var onDeviceReady=function(){
     intel.xdk.device.hideSplashScreen();
-    
+    getLocation();
 };
 
 document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
