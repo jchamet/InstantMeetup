@@ -1,0 +1,69 @@
+#! /bin/bash
+IFS=$'\n'
+
+parseConfig(){
+	if [ -f "./.finsert" ]
+	then
+		echo "Using config file..."
+		declare -a lines
+		lines=(`cat .finsert`)
+		if [ ${#lines[@]} -eq 2 ]
+		then
+			inputFile=${lines[0]}
+			outputFile=${lines[1]}
+			echo $inputFile"->"$outputFile
+		else 
+			echo "Formatting error in configuration file ${#lines[@]}"
+		fi
+	else
+		echo "No configuration file found"
+	fi 
+	exit 0
+}
+
+doOutput(){
+	rm $outputFile 2>&1 > /dev/null
+	
+	for line in `cat $inputFile`
+	do
+		insert=`echo "$line" | sed -e "s/\(.*#insert(\(.*\))\)/\2/g"`
+		if [ $line == "$insert" ]
+		then
+			echo $line >> $outputFile
+		else
+			echo "Inserting '$insert'."
+			cat $insert >> $outputFile
+		fi
+	done
+}
+
+genConfig (){
+	echo "$inputFile" > ./.finsert
+	echo "$outputFile" >> ./.finsert
+}
+
+# inputFile=$1
+# OPTIND=2
+
+options="o:(output)(output-file)"
+while getopts $options option
+do
+    case $option in
+		o  )	echo "asdasd! '$OPTARG'"; outputFile=$OPTARG;;
+        \? )    if (( (err & ERROPTS) != ERROPTS ))
+                then
+                    error $NOEXIT $ERROPTS "Unknown option."
+                fi;;
+    esac
+done
+
+if [ -z "$inputFile" ]
+then parseConfig
+fi
+
+if [ -z "$outputFile" ]
+then outputFile=$inputFile".o"
+fi
+
+doOutput
+genConfig
