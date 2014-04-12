@@ -42,14 +42,14 @@ genConfig (){
 	echo "$outputFile" >> ./.finsert
 }
 
-# inputFile=$1
-# OPTIND=2
+inputFile=$1
+OPTIND=2
 
 options="o:(output)(output-file)"
 while getopts $options option
 do
     case $option in
-		o  )	echo "asdasd! '$OPTARG'"; outputFile=$OPTARG;;
+		o  )	outputFile=$OPTARG;;
         \? )    if (( (err & ERROPTS) != ERROPTS ))
                 then
                     error $NOEXIT $ERROPTS "Unknown option."
