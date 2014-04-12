@@ -15,3 +15,13 @@ Target Audience:
         Easily organize group study sessions, food and coffee breaks
     Post-Grad College Students:
         ---
+        
+Features: 	
+
+    HTML5+CSS+JQUERY
+    GET Phone Number+Geolocation+Contact List
+    Google Maps API
+    Intel XDK + PhoneGap
+	MongoDB Database
+	Node.js
+	Socket.io
