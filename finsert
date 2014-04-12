@@ -18,12 +18,11 @@ parseConfig(){
 	else
 		echo "No configuration file found"
 	fi 
-	exit 0
 }
 
 doOutput(){
 	rm $outputFile 2>&1 > /dev/null
-	
+
 	for line in `cat $inputFile`
 	do
 		insert=`echo "$line" | sed -e "s/\(.*#insert(\(.*\))\)/\2/g"`
@@ -67,3 +66,5 @@ fi
 
 doOutput
 genConfig
+
+exit
