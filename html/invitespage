@@ -1,5 +1,5 @@
 <!--ACTIVE INVITES PAGE-->
-    <div data-role="page" id="list_page">
+    <div data-role="page" id="invites_page">
 
         <div data-role="header">
             <h1>Active Invites</h1>
