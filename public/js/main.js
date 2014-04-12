@@ -33,7 +33,7 @@ var initializeMap = function(){
 
 var onDeviceReady=function(){
     intel.xdk.device.hideSplashScreen();
-    if(){
+    if(/* Home Page (other pages don't have a map) */){
         initializeMap();   
     }
 };
