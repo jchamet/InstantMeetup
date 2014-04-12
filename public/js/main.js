@@ -22,6 +22,7 @@ var getLocation = function(){
 };
 
 var initializeMap = function(){
+    getLocation();
     var mapProp = {
       center:new google.maps.LatLng(user_latitude,user_longitude),
       zoom:14,
@@ -32,7 +33,9 @@ var initializeMap = function(){
 
 var onDeviceReady=function(){
     intel.xdk.device.hideSplashScreen();
-    getLocation();
+    if(){
+        initializeMap();   
+    }
 };
 
 document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
