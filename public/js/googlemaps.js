@@ -25,6 +25,7 @@ function drawMap() {
         _map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     }
 }
+
 //40.7655,-73.97204 = NYC
 var currentLatitude = "40.7655";
 var currentLongitude = "-73.97204";
@@ -75,6 +76,7 @@ var getLocation = function() {
 
 function onDeviceReady() {
     try {
+        
         if (intel.xdk.device.platform.indexOf("Android") != -1) {
             intel.xdk.display.useViewport(300, 300);
             document.getElementById("map_canvas").style.width = "300px";
@@ -95,8 +97,9 @@ function onDeviceReady() {
             document.getElementById("map_canvas").style.height = screen.height + "px";
             intel.xdk.geolocation.watchPosition(suc, fail, options);
         }
-        var width = 280;
-        var height = 280;
+        
+        var width = 260;
+        var height = 260;
         intel.xdk.display.useViewport(width, height);
         document.getElementById("map_canvas").style.width = width + "px";
         document.getElementById("map_canvas").style.height = height + "px";
