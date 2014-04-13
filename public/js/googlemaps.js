@@ -26,8 +26,8 @@ function drawMap() {
     }
 }
 //40.7655,-73.97204 = NYC
-var currentLatitude = "40.713768";
-var currentLongitude = "-73.016696";
+var currentLatitude = "40.7655";
+var currentLongitude = "-73.97204";
 var options = {
     timeout: 10000,
     maximumAge: 11000,
@@ -76,8 +76,8 @@ var getLocation = function() {
 function onDeviceReady() {
     try {
         if (intel.xdk.device.platform.indexOf("Android") != -1) {
-            intel.xdk.display.useViewport(480, 480);
-            document.getElementById("map_canvas").style.width = "480px";
+            intel.xdk.display.useViewport(300, 300);
+            document.getElementById("map_canvas").style.width = "300px";
         } else if (intel.xdk.device.platform.indexOf("iOS") != -1) {
             if (intel.xdk.device.model.indexOf("iPhone") != -1 || intel.xdk.device.model.indexOf("iPod") != -1) {
                 intel.xdk.display.useViewport(320, 320);
@@ -95,6 +95,11 @@ function onDeviceReady() {
             document.getElementById("map_canvas").style.height = screen.height + "px";
             intel.xdk.geolocation.watchPosition(suc, fail, options);
         }
+        var width = 280;
+        var height = 280;
+        intel.xdk.display.useViewport(width, height);
+        document.getElementById("map_canvas").style.width = width + "px";
+        document.getElementById("map_canvas").style.height = height + "px";
     } catch (e) {
         alert(e.message);
     }
