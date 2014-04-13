@@ -7,29 +7,26 @@ var alert = function(msg, title, buttonText){
     }
     intel.xdk.notification.alert(msg, title, buttonText);
 };
+
 alert("test1");
 
-var user_latitude = position.coords.latitude;
-var user_longitude = position.coords.longitude;
 var getLocation = function(){
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(showPosition);
-    user_latitude = position.coords.latitude;
-    user_longitude = position.coords.longitude;
   }
   else{
       alert("Geolocation is disabled! Please enable it.");
   }
 };
 
-function initialize()
-{
-var mapProp = {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+function initialize(){
+    getLocation();
+    var mapProp = {
+      center:new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
+      zoom:5,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 
 var onDeviceReady=function(){
@@ -37,5 +34,5 @@ var onDeviceReady=function(){
 };
 
 document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
-alert("test2");
 
+alert("no js errors");
