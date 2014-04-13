@@ -1,15 +1,12 @@
-var homepage = $(this).('div[id="homepage"]');
-var lists = $(this).('div[id="lists"]');
-$(document).on("swiperight", 'div.ui-page', function(){
+$(document).on("swipeleft", 'div.ui-page', function(){
     var nextpage = $(this).next('div[data-role="page"]');
     if (nextpage.length > 0) {
-        $.mobile.changePage(lists, {transition:"slide", reverse:true}, true, true);
-    }
-});
-/*$(document).on("swipeleft", 'div.ui-page', function(){
-    var nextpage = $(this).next('div[data-role="page"]');
-    if (nextpage.length > 0) {
-        $.mobile.changePage(nextpage, {transition:"slide"}, false, true);
+        if($.mobile.activePage == "home_page"){
+            alert("test");
+        }
+        else{
+            $.mobile.changePage(nextpage, {transition:"slide"}, false, true);
+        }
     }
 });
 $(document).on("swiperight", 'div.ui-page', function(){
@@ -18,4 +15,4 @@ $(document).on("swiperight", 'div.ui-page', function(){
         $.mobile.changePage(prevpage, {transition: "slide",
         reverse: true}, true, true);
     }
-});*/
+});
