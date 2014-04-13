@@ -15,11 +15,7 @@ function drawMap() {
     var mapOptions = {
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        zoomControl: true,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL,
-            position: google.maps.ControlPosition.LEFT_TOP
-        },
+        zoomControl: false,
     };
     if (boolTripTrack === true) {
         _map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
@@ -76,7 +72,7 @@ var getLocation = function() {
 
 function onDeviceReady() {
     try {
-        
+        /*
         if (intel.xdk.device.platform.indexOf("Android") != -1) {
             intel.xdk.display.useViewport(300, 300);
             document.getElementById("map_canvas").style.width = "300px";
@@ -89,6 +85,7 @@ function onDeviceReady() {
                 document.getElementById("map_canvas").style.width = "768px";
             }
         }
+        */
         if (intel.xdk.iswin8) {
             document.getElementById("map_canvas").style.width = screen.width + "px";
             document.getElementById("map_canvas").style.height = screen.height + "px";
@@ -100,7 +97,6 @@ function onDeviceReady() {
         
         var width = 260;
         var height = 260;
-        intel.xdk.display.useViewport(width, height);
         document.getElementById("map_canvas").style.width = width + "px";
         document.getElementById("map_canvas").style.height = height + "px";
     } catch (e) {
