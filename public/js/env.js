@@ -1,5 +1,8 @@
 var GlobalEnv = function(){}
 
+GlobalEnv.serverIP = "165.225.137.91"
+GlobalEnv.UUID = intel.xdk.device.uuid
+
 GlobalEnv.setPhone = function(phoneNumber){
     GlobalEnv.phone = phoneNumber;
 }
