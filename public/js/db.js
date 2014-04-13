@@ -54,17 +54,16 @@ Database.compareCode = function(cb){
     intel.xdk.device.getRemoteData(Database.apiURL + "/vcode", "GET", requestBody, "success_handler", "error_handler");
 }
 
-// Uses GlobalEnv.currentNumberList to tell the server which people
+// Uses GlobalEnv.currentNumberList to tell the server which people should be broadcasted
 // Callback arguments:
-// true if there were no errors
-// false if there was an error from the server
+// false if there were no errors :)
 // Error object if there was an error connecting to the server
 Database.broadcast = function(cb){
     $.mobile.loading('show');
     success_handler = function(data){
         $.mobile.loading('hide');
         var data = JSON.parse(data);
-        cb(!data.error);
+        cb(data.error);
     };
     error_handler = function(err){
         $.mobile.loading('hide');

@@ -3,8 +3,16 @@ var GlobalEnv = function(){}
 GlobalEnv.serverIP = "165.225.137.91"
 GlobalEnv.UUID = intel.xdk.device.uuid
 
+
+// Gets all of the values from cookies
+// Should be called when the application starts
+GlobalEnv.setup = function(){
+    GlobalEnv.phoneNumber = getCookie("phoneNumber")
+}
+
 GlobalEnv.setPhone = function(phoneNumber){
-    GlobalEnv.phone = phoneNumber;
+    GlobalEnv.phoneNumber = phoneNumber;
+    setCookie("phoneNumber", phoneNumber);
 }
 
 var setCookie = function(name, value){
