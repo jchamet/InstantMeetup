@@ -5,6 +5,9 @@
     /* remove white space under header */
     margin-top: -30px;
 }
+a{
+    text-decoration: none !important;
+}
 h1{
    
 }
@@ -27,7 +30,6 @@ h1{
     background-color: #00548d;
     -webkit-transition: all .5s ease-in-out;
     color:#c3daea;
-    text-decoration: none !important;
 }
 .tab_button:hover{
     background-color: #000058;
