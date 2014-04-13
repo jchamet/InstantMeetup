@@ -7,7 +7,7 @@ var alert = function(msg, title, buttonText){
     }
     intel.xdk.notification.alert(msg, title, buttonText);
 };
-alert("test");
+alert("test1");
 
 var user_latitude = position.coords.latitude;
 var user_longitude = position.coords.longitude;
@@ -37,5 +37,5 @@ var onDeviceReady=function(){
 };
 
 document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
-alert("test");
+alert("test2");
 
