@@ -2,11 +2,12 @@ var alert = function(msg, title, buttonText){
     if (title === undefined){
         title = "Error";
     }
-    if (buttonText == undefined){
+    if (buttonText === undefined){
         buttonText = "Got it!";
     }
     intel.xdk.notification.alert(msg, title, buttonText);
 };
+alert("test");
 
 var user_latitude = position.coords.latitude;
 var user_longitude = position.coords.longitude;
