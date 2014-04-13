@@ -20,4 +20,9 @@ h1{
     width:100px;
     float:left;
     overflow:hidden;
+    background-color: #363698;
+    -webkit-transition: all .5s ease-in-out;
+}
+.tab_button:hover{
+    background-color: #7171cb;
 }
