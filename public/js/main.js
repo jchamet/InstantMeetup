@@ -21,14 +21,14 @@ var getLocation = function(){
   }
 };
 
-var initializeMap = function(){
-    getLocation();
-    var mapProp = {
-      center:new google.maps.LatLng(user_latitude,user_longitude),
-      zoom:14,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-      };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 
 var onDeviceReady=function(){
