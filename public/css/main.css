@@ -20,7 +20,7 @@ h1{
     width:300px;
     margin:auto;
 }
-.tab_button{
+.tab_button,.tab_button_selected{
     text-align: center;
     padding-top: 5px;
     height:25px;
@@ -31,7 +31,7 @@ h1{
     -webkit-transition: all .5s ease-in-out;
     color:#c3daea;
 }
-.tab_button:hover{
+.tab_button:hover,.tab_button_selected{
     background-color: #000058;
     color: white;
 }
