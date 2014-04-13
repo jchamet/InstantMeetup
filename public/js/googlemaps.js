@@ -13,9 +13,11 @@ function drawMap() {
     var latlng = new google.maps.LatLng(currentLatitude, currentLongitude);
     myLatLng = latlng;
     var mapOptions = {
+        draggable:false,
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoomControl: false,
+        zoom:10,
     };
     if (boolTripTrack === true) {
         _map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
