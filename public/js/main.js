@@ -1,11 +1,11 @@
 var alert = function(msg, title, buttonText){
-    if (title == undefined){
-        title = "Error"
+    if (title === undefined){
+        title = "Error";
     }
     if (buttonText == undefined){
-        buttonText = "Got it!"   
+        buttonText = "Got it!";
     }
-    intel.xdk.notification.alert(msg, title, buttonText)
+    intel.xdk.notification.alert(msg, title, buttonText);
 };
 
 var user_latitude = position.coords.latitude;
