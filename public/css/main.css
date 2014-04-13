@@ -11,5 +11,13 @@ hr{
     height: 1px;
 }
 h1{
-    margin-bottom: : -10px;
+   
+}
+#tab_bar{
+    height:30px;
+}
+.tab_button{
+    width:100px;
+    float:left;
+    overflow:hidden;
 }
