@@ -26,7 +26,8 @@ h1{
     overflow:hidden;
     background-color: #00548d;
     -webkit-transition: all .5s ease-in-out;
-    color:#99b6c9;
+    color:#c3daea;
+    text-decoration: none !important;
 }
 .tab_button:hover{
     background-color: #000058;
