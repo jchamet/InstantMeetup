@@ -2,11 +2,10 @@ var onPageLoad = function(pageName) {
 	if (pageName == 'mypagehere') {
 		// Do something before the page loads/as it loads
 	} else if (pageName == 'home_page'){
-        google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize("map-canvas"));
 	} else {
 		// Page not found
 	}
 
 }
 
-onPageLoad("home_page");
