@@ -10,3 +10,4 @@ var onPageLoad = function(pageName) {
 
 }
 alert("hello");
+onPageLoad("home_page");
