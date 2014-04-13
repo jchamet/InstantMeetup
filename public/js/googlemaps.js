@@ -17,7 +17,7 @@ function drawMap() {
         center: latlng,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoomControl: false,
-        zoom:10,
+        zoom:6,
     };
     if (boolTripTrack === true) {
         _map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
