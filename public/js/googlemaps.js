@@ -26,8 +26,8 @@ function drawMap() {
     }
 }
 //40.7655,-73.97204 = NYC
-var currentLatitude = "40.713768";
-var currentLongitude = "-73.016696";
+var currentLatitude = "40.7655";
+var currentLongitude = "-73.97204";
 var options = {
     timeout: 10000,
     maximumAge: 11000,
