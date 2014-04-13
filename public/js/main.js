@@ -36,5 +36,5 @@ var onDeviceReady=function(){
 };
 
 document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
-
+alert("test");
 
