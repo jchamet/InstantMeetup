@@ -11,6 +11,8 @@ h1{
 #tab_bar{
     height:30px;
     background-color: #00009a;
+    width:300px;
+    margin:auto;
 }
 .tab_button{
     padding-top: 10px;
